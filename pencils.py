@@ -58,10 +58,6 @@ n = 1
 pen = 0
 
 for region in regionprops(labeled):
-    print("Object ", n)
-    print(region.area)
-    print(region.bbox)
-    print(circularity(region, n))
     if (((circularity(region, n) > 100) and (500000 > region.area > 330000))):
         pen += 1
     n += 1
@@ -69,7 +65,6 @@ for region in regionprops(labeled):
 #binary = morphology.binary_erosion(binary, iterations = 10)
 #binary = morphology.binary_dilation(binary, iterations = 40)
 
-print("Objects: ", np.max(labeled))
 print("Pencils: ", pen)
 
 plt.subplot(131)
