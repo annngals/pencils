@@ -40,9 +40,6 @@ areas = []
 
 for region in regionprops(labeled):
     areas.append(region.area)
-    
-print(np.mean(areas))
-print(np.median(areas))
 
 for region in regionprops(labeled):
     if region.area < np.mean(areas):
