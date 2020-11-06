@@ -62,7 +62,6 @@ for pic in range(1, 13):
             pen += 1
         n += 1
         
-    print(pic, " ", pen)
     pencils += pen
     
 
